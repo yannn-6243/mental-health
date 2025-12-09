@@ -10,15 +10,12 @@
   --text-dark: #ecfdf5;
 }
 
-/* Background utama: SELALU cerah */
+/* Background utama
 body {
   background: linear-gradient(to bottom, #d1fae5, #ecfdf5, #ffffff);
   color: var(--text);
 }
 
-/* Mode toggle: kalau nanti mau dipakai manual silakan,
-   tapi tidak ada efek apa-apa sekarang karena kita tidak
-   menambah class light-mode / dark-mode ke body */
 body.light-mode {
   background: linear-gradient(to bottom, #d1fae5, #ecfdf5, #ffffff);
   color: var(--text);
