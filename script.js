@@ -138,9 +138,7 @@ document.getElementById('nextBtn').addEventListener('click', ()=>{
   else finishTest();
 });
 
-// ========================================
 // API Functions
-// ========================================
 async function submitToBackend(data) {
   try {
     const response = await fetch(`${API_BASE_URL}/api/submit`, {
@@ -195,9 +193,7 @@ async function deleteAllFromBackend() {
   }
 }
 
-// ========================================
 // Local Storage (Fallback)
-// ========================================
 const STORAGE_KEY = 'mentalHealthHistorySDG3';
 
 function getHistoryLocal(){
@@ -215,9 +211,7 @@ function clearHistoryLocal(){
   localStorage.removeItem(STORAGE_KEY);
 }
 
-// ========================================
 // Finish Test
-// ========================================
 async function finishTest(){
   if(answers.some(a => a === null)){
     alert('Jawab semua pertanyaan dulu ya.');
@@ -304,9 +298,7 @@ async function finishTest(){
 
 document.getElementById('restartBtn')?.addEventListener('click', ()=> show('test'));
 
-// ========================================
 // History Rendering
-// ========================================
 async function renderHistory(){
   const body = document.getElementById('historyBody');
   body.innerHTML = '<tr><td class="py-3 px-2" colspan="5">Memuat data...</td></tr>';
